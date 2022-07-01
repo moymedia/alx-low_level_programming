@@ -1,2 +1,2 @@
 #!/bib/bash
-gcc S $CFILE
+gcc s $CFILE
