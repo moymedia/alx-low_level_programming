@@ -5,7 +5,7 @@
  * @s: pointer to binary chars
  * Return: int value or zero
  */
-unsigned int binary_to_uint(const char *s)
+unsigned int binary_to_int(const char *s)
 {
 	unsigned int res = 0, i = 0;
 
