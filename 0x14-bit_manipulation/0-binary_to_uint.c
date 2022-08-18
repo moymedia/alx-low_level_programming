@@ -2,21 +2,21 @@
 
 /**
  * binary_to_int - converts a binary to int
- * @s: pointer to binary chars
+ * @b: pointer to binary chars
  * Return: int value or zero
  */
-unsigned int binary_to_int(const char *s)
+unsigned int binary_to_uint(const char *b)
 {
 	unsigned int res = 0, i = 0;
 
-	if (!s)
+	if (!b)
 		return (0);
-	for (; s[i]; i++)
+	for (; b[i]; i++)
 	{
-		if (s[i] < '0' || s[i] > '1')
+		if (b[i] < '0' || b[i] > '1')
 			return (0);
 		res = res << 1;
-		res |= (s[i] - '0');
+		res |= (b[i] - '0');
 	}
 
 	return (res);
