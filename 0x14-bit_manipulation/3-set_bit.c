@@ -1,19 +1,18 @@
 #include "main.h"
 
 /**
- * set_bit - set the bit at a given index
- * @n: number to check
- * @index: index to check
- * Return: bit value or -1;
+ * set_bit - gets bit on index `index`
+ * @n: decimal number
+ * @index: index of the bit
+ * Return: 1 (success) or -1(faillure)
  */
+
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int i = 1, len = 0;
-	
-	if (!n)
+	if (index >= (sizeof(unsigned long int) * 8))
 		return (-1);
-	while (len++ < index)
-		i = i << 1;
-	*n |= i;
+
+	*n ^= (1 << index);
+
 	return (1);
 }
