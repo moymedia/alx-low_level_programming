@@ -1,18 +1,17 @@
 #include "main.h"
 
 /**
- * get_bit - get the bit at a given index
- * @n: number to check
- * @index: index to check
- * Return: bit value or -1;
+ * get_bit - get bit at nth index
+ * @n: binary number
+ * @index: nth position
+ *
+ * Return: bit at that position
  */
+
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int i = 1, len = 0;
-	
-	while (len++ < index)
-		i = i << 1;
-	if (i > n)
+	if (index >= sizeof(n) * 8)
 		return (-1);
-	return(n & i ? 1 : 0);
+
+	return ((n >> index) & 1);
 }
